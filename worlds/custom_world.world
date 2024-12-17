@@ -1,0 +1,258 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <!-- Gravity -->
+    <gravity>0 0 -9.8</gravity>
+
+    <!-- Sunlight -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Ground Plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Boundary Walls -->
+    <model name="boundary_walls">
+      <static>true</static>
+      <link name="link">
+        <!-- South Wall -->
+        <visual name="south_wall_visual">
+          <geometry>
+            <box>
+              <size>5.1 0.1 1.6</size>
+            </box>
+          </geometry>
+          <pose>0 -5 0.5 0 0 0</pose>
+        </visual>
+        <collision name="south_wall_collision">
+          <geometry>
+            <box>
+              <size>5.1 0.1 1.6</size>
+            </box>
+          </geometry>
+          <pose>0 -5 0.5 0 0 0</pose>
+        </collision>
+
+        <!-- North Wall -->
+        <visual name="north_wall_visual">
+          <geometry>
+            <box>
+              <size>5.1 0.1 1.6</size>
+            </box>
+          </geometry>
+          <pose>0 5 0.5 0 0 0</pose>
+        </visual>
+        <collision name="north_wall_collision">
+          <geometry>
+            <box>
+              <size>5.1 0.1 1.6</size>
+            </box>
+          </geometry>
+          <pose>0 5 0.5 0 0 0</pose>
+        </collision>
+
+        <!-- East Wall -->
+        <visual name="east_wall_visual">
+          <geometry>
+            <box>
+              <size>0.1 10 1.6</size>
+            </box>
+          </geometry>
+          <pose>2.5 0 0.5 0 0 0</pose>
+        </visual>
+        <collision name="east_wall_collision">
+          <geometry>
+            <box>
+              <size>0.1 10 1.6</size>
+            </box>
+          </geometry>
+          <pose>2.5 0 0.5 0 0 0</pose>
+        </collision>
+
+        <!-- West Wall -->
+        <visual name="west_wall_visual">
+          <geometry>
+            <box>
+              <size>0.1 10 1.6</size>
+            </box>
+          </geometry>
+          <pose>-2.5 0 0.5 0 0 0</pose>
+        </visual>
+        <collision name="west_wall_collision">
+          <geometry>
+            <box>
+              <size>0.1 10 1.6</size>
+            </box>
+          </geometry>
+          <pose>-2.5 0 0.5 0 0 0</pose>
+        </collision>
+      </link>
+    </model>
+
+    <!-- Bookshelves -->
+    <!-- row 1 -->
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>2.43 -3.96 0 0 0 -1.57</pose> 
+      <name>Bookshelves_11</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>2.43 -1.98 0 0 0 -1.57</pose> 
+      <name>Bookshelves_12</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>2.43 0 0 0 0 -1.57</pose> 
+      <name>Bookshelves_13</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>2.43 1.98 0 0 0 -1.57</pose> 
+      <name>Bookshelves_14</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>2.43 3.96 0 0 0 -1.57</pose> 
+      <name>Bookshelves_15</name>    
+    </include>
+
+
+    <!-- row 2 -->
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>0 -3.40 0 0 0 1.57</pose> 
+      <name>Bookshelves_21</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>0 -1.58 0 0 0 1.57</pose> 
+      <name>Bookshelves_22</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>0 -0.20 0 0 0 1.57</pose> 
+      <name>Bookshelves_23</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>0 1.58 0 0 0 1.57</pose> 
+      <name>Bookshelves_24</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>0 3.40 0 0 0 1.57</pose> 
+      <name>Bookshelves_25</name>    
+    </include>
+
+    <!-- row 3 -->
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>0 -3.40 0 0 0 -1.57</pose> 
+      <name>Bookshelves_31</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>0 -1.58 0 0 0 -1.57</pose> 
+      <name>Bookshelves_32</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>0 -0.20 0 0 0 -1.57</pose> 
+      <name>Bookshelves_33</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>0 1.58 0 0 0 -1.57</pose> 
+      <name>Bookshelves_34</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>0 3.40 0 0 0 -1.57</pose> 
+      <name>Bookshelves_35</name>    
+    </include>
+
+    <!-- row 4 -->
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>-2.43 -3.96 0 0 0 1.57</pose> 
+      <name>Bookshelves_51</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>-2.43 -1.98 0 0 0 1.57</pose> 
+      <name>Bookshelves_52</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>-2.43 0 0 0 0 1.57</pose> 
+      <name>Bookshelves_53</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>-2.43 1.98 0 0 0 1.57</pose> 
+      <name>Bookshelves_54</name>    
+    </include>
+
+    <include>
+      <uri>model://bookshelf</uri>  
+      <pose>-2.43 3.96 0 0 0 1.57</pose> 
+      <name>Bookshelves_55</name>    
+    </include>
+
+
+
+
+    <!--Reader Desk-->
+    <!-- <include>
+      <uri>model://table</uri>  
+      <pose>1.5 3.5 0 0 0 0</pose> 
+      <name>table_1</name>    
+    </include>
+
+     <include>
+      <uri>model://table</uri>  
+      <pose>1.5 0.5 0 0 0 0</pose> 
+      <name>table_2</name>    
+    </include>
+
+     <include>
+      <uri>model://table</uri>  
+      <pose>1.5 -2.0 0 0 0 0</pose> 
+      <name>table_3</name>    
+    </include> -->
+
+     <!-- <include>
+      <uri>model://chair</uri>  
+      <pose>1.7 3.4 0 0 0 0</pose> 
+      <name>chair_1</name>    
+    </include> -->
+
+    <!-- Librarian Desk -->
+   <!--  <include>
+      <uri>model://office desk</uri>  
+      <pose>2 4.5 0 0 0 0</pose> 
+      <name>desk</name>    
+    </include> -->
+    
+
+  </world>
+</sdf>

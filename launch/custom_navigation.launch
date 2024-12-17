@@ -1,0 +1,37 @@
+<launch>
+  <!-- Arguments -->
+  <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+  <arg name="map_file" default="$(find project)/map/map.yaml"/>
+  <arg name="open_rviz" default="true"/>
+  <arg name="use_sim_time" value="true"/>
+
+  <!-- Set use_sim_time globally -->
+  <param name="use_sim_time" value="true" />
+  
+  <!-- Turtlebot3 -->
+  <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch">
+    <arg name="model" value="$(arg model)" />
+    <param name="use_sim_time" value="true"/>
+  </include>
+  
+  <!-- initialise amcl pose -->
+  <node pkg="my_worlds" name="amcl_initpose" type="amcl_initpose.py" output="screen">
+  <param name="use_sim_time" value="true"/>
+  </node>
+  
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)">
+  <param name="use_sim_time" value="true"/>
+  </node>
+  
+  <!-- initialise navigation pose -->
+  <node pkg="my_worlds" name="navigate_turtlebot3" type="navigate_turtlebot3.py" output="screen">
+  <param name="use_sim_time" value="true"/>
+  </node> 
+  
+
+  <!-- rviz -->
+  <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find project)/rviz/turtlebot3_navigate.rviz"/>
+  
+</launch>
