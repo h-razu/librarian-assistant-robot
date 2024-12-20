@@ -3,7 +3,7 @@
   <arg name="x_pos" default="1.25"/>
   <arg name="y_pos" default="-4.7"/>
   <arg name="z_pos" default="0.0"/>
-  <arg name="yaw" default="-1.57"/>
+  <arg name="yaw" default="1.57"/>
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="world_name" value="/home/hrazu/catkin_ws/src/project/worlds/custom_world.world"/>
